@@ -1,8 +1,10 @@
+#ifndef TRATADOR_H
+#define TRATADOR_H
+
 #include <iostream>
 #include <string>
 #include "funcionario.h"
 
-class Tratador: protected Funcionario{
-	public:
-		
-}
+class Tratador: protected Funcionario{};
+
+#define

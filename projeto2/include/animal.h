@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <string>z
 
 class Animal{
 	protected:
@@ -15,5 +15,4 @@ class Animal{
 		string batismo;
 
 	public:
-		lulu
 }
