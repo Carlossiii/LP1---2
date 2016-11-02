@@ -8,6 +8,8 @@ Reptil::Reptil(){
 Reptil::Reptil(bool Ven, string Tipo)
 	: venenoso(Ven), tipo_veneno(Tipo) {}
 
+Reptil::~Reptil() {}
+
 bool Reptil::getVenenoso(){return venenoso;}
 
 void Reptil::setVenenoso(bool Ven){venenoso = Ven;}

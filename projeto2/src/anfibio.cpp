@@ -8,6 +8,8 @@ Anfibio::Anfibio(){
 Anfibio::Anfibio(int Total, string Ulti)
 	: total_mudas(Total), ultima_muda(Ulti) {}
 
+Anfibio::~Anfibio () {}
+
 int Anfibio::getTotal_mudas(){return total_mudas;}
 
 void Anfibio::setTotal_mudas(int Total){total_mudas = Total;}

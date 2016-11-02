@@ -14,6 +14,8 @@ Animal::Animal(){
 Animal::Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, string Bat)
 	: id(Id), classe(Classe), nome(Nome), cientifico(Cient), sexo(Sexo), tamanho(Tam), dieta(Dieta), batismo(Bat) {}
 
+Animal::~Animal () {}
+
 int Animal::getId(){return id;}
 
 void Animal::setId(int Id){id = Id;}

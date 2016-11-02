@@ -7,6 +7,8 @@ Mamifero::Mamifero(){
 Mamifero::Mamifero(string Cor)
 	: cor_pelo(Cor) {}
 
+Mamifero::~Mamifero() {}	
+
 string Mamifero::getCor_pelo(){return cor_pelo;}
 
 void Mamifero::setCor_pelo(string Cor){cor_pelo = Cor;}

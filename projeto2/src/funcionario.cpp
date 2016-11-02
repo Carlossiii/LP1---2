@@ -13,6 +13,8 @@ Funcionario::Funcionario(){
 Funcionario::Funcionario(int Id, string Nome, string Cpf, short Idade, short Tipos, char Fator, string Esp)
 	: id(Id), nome(Nome), cpf(Cpf), idade(Idade), tipo_sanguineo(Tipos), fatorRH(Fator), especialidade(Esp) {}
 
+Funcionario::~Funcionario() {}
+
 int Funcionario::getId(){return id;}
 
 void Funcionario::setId(int Id){id = Id;}
