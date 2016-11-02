@@ -1,6 +1,11 @@
+#ifndef AVE_H
+#define AVE_H
+
 #include <iostream>
-#include <string>
+//#include <string>
 #include "animal.h"
+
+using namespace std;
 
 class Ave: public Animal{
 	protected:
@@ -18,3 +23,5 @@ class Ave: public Animal{
 		int getEnvergadura();
 		void setEnvergadura(int Enve);
 };
+
+#endif

@@ -2,8 +2,10 @@
 #define EXOTICO_H
 
 #include <iostream>
-#include <string>
+//#include <string>
 #include "animalsilvestre.h"
+
+using namespace std;
 
 class Exotico: public AnimalSilvestre{
 	protected:

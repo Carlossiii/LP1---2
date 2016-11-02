@@ -2,9 +2,11 @@
 #define TRATADOR_H
 
 #include <iostream>
-#include <string>
+//#include <string>
 #include "funcionario.h"
+
+using namespace std;
 
 class Tratador: public Funcionario{};
 
-#define
+#endif

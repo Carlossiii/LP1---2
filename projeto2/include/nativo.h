@@ -2,13 +2,15 @@
 #define NATIVO_H
 
 #include <iostream>
-#include <string>
+//#include <string>
 #include "animalsilvestre.h"
+
+using namespace std;
 
 class Nativo: public AnimalSilvestre{
 	protected:
 		string uf_origem;
-		string autorização;
+		string autorizacao;
 		
 	public:
 		Nativo();

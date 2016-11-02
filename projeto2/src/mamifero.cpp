@@ -1,12 +1,12 @@
 #include "mamifero.h"
 
-Mamiforo::Mamiforo(){
+Mamifero::Mamifero(){
 	cor_pelo = "";
 }
 
-Mamiforo::Mamiforo(string Cor)
+Mamifero::Mamifero(string Cor)
 	: cor_pelo(Cor) {}
 
-string Mamiforo::getCor_pelo(){return cor_pelo;}
+string Mamifero::getCor_pelo(){return cor_pelo;}
 
-void Mamiforo::setCor_pelo(string Cor){cor_pelo = Cor;}
+void Mamifero::setCor_pelo(string Cor){cor_pelo = Cor;}

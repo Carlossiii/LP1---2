@@ -1,6 +1,11 @@
+#ifndef ANFIBIO_H
+#define ANFIBIO_H
+
 #include <iostream>
-#include <string>
+//#include <string>
 #include "animal.h"
+
+using namespace std;
 
 class Anfibio: public Animal{
 	protected:
@@ -18,3 +23,5 @@ class Anfibio: public Animal{
 		string getUltimo_muda();
 		void setUltimo_muda(string Ulti);
 };
+
+#endif

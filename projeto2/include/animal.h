@@ -2,7 +2,11 @@
 #define ANIMAL_H
 
 #include <iostream>
-#include <string>
+#include "tratador.h"
+#include "veterinario.h"
+//#include <string>
+
+using namespace std;
 
 class Animal{
 	protected:

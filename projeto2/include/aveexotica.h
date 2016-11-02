@@ -2,9 +2,11 @@
 #define AVEEXOTICA_H
 
 #include <iostream>
-#include <string>
+//#include <string>
 #include "exotico.h"
 #include "ave.h"
+
+using namespace std;
 
 class AveExotica: public Ave, public Exotico{};
 

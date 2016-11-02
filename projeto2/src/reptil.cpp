@@ -1,8 +1,8 @@
 #include "reptil.h"
 
 Reptil::Reptil(){
-	v = false;
-	tipo = "";
+	venenoso = false;
+	tipo_veneno = "";
 }
 
 Reptil::Reptil(bool Ven, string Tipo)

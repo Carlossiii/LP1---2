@@ -5,7 +5,7 @@ Animal::Animal(){
 	classe = "";
 	nome = "";
 	cientifico = "";
-	sexo = "";
+	sexo = 0;
 	tamanho = 0.0;
 	dieta = "";
 	batismo = "";

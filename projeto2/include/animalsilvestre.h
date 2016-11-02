@@ -2,7 +2,9 @@
 #define ANIMALSILVESTRE_H
 
 #include <iostream>
-#include <string>
+//#include <string>
+
+using namespace std;
 
 class AnimalSilvestre{
 	protected:

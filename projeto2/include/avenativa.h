@@ -2,9 +2,11 @@
 #define AVENATIVA_H
 
 #include <iostream>
-#include <string>
+//#include <string>
 #include "nativo.h"
 #include "ave.h"
+
+using namespace std;
 
 class AveNativa: public Ave, public Nativo{};
 

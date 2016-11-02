@@ -10,8 +10,8 @@ Funcionario::Funcionario(){
 	especialidade = "";
 }
 
-Funcionario(int Id, string Nome, string Cpf, short Idade, short Tipos, char Fator, string Esp)
-	: idade(Id), nome(Nome), cpf(Cpf), idade(ida), tipo_sanguineo(ts), fatorRH(Fator), especialidade(Esp) {}
+Funcionario::Funcionario(int Id, string Nome, string Cpf, short Idade, short Tipos, char Fator, string Esp)
+	: id(Id), nome(Nome), cpf(Cpf), idade(Idade), tipo_sanguineo(Tipos), fatorRH(Fator), especialidade(Esp) {}
 
 int Funcionario::getId(){return id;}
 
