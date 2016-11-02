@@ -5,6 +5,6 @@
 #include <string>
 #include "funcionario.h"
 
-class Tratador: protected Funcionario{};
+class Tratador: public Funcionario{};
 
 #define

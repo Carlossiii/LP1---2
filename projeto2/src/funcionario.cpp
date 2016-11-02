@@ -15,28 +15,28 @@ Funcionario(int Id, string Nome, string Cpf, short Idade, short Tipos, char Fato
 
 int Funcionario::getId(){return id;}
 
-string Funcionario::getNome(){return nome;}
-
-string Funcionario::getCpf(){return cpf;}
-
-short Funcionario::getIdade(){return idade;}
-
-short Funcionario::getTipo_sanguineo(){return tipo_sanguineo;}
-
-char Funcionario::getFatorRH(){return fatorRH;}
-
-string Funcionario::getEspecialidade(){return especialidade;}
-
 void Funcionario::setId(int Id){id = Id;}
+
+string Funcionario::getNome(){return nome;}
 
 void Funcionario::setNome(string Nome){nome = Nome;}
 
+string Funcionario::getCpf(){return cpf;}
+
 void Funcionario::setCpf(string Cpf){cpf = Cpf;}
+
+short Funcionario::getIdade(){return idade;}
 
 void Funcionario::setIdade(short Idade){idade = Idade;}
 
+short Funcionario::getTipo_sanguineo(){return tipo_sanguineo;}
+
 void Funcionario::setTipo_sanguineo(short Tipos){tipo_sanguineo = Tipos;}
 
+char Funcionario::getFatorRH(){return fatorRH;}
+
 void Funcionario::setFatorRH(char Fator){fatorRH = Fator;}
+
+string Funcionario::getEspecialidade(){return especialidade;}
 
 void Funcionario::setEspecialidade(string Esp){especialidade = Esp;}

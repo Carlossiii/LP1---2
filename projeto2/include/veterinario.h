@@ -5,6 +5,6 @@
 #include <string>
 #include "funcionario.h"
 
-class Veterinario: protected Funcionario{};
+class Veterinario: public Funcionario{};
 
 #endif

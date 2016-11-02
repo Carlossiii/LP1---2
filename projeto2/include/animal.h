@@ -1,5 +1,8 @@
+#ifndef ANIMAL_H
+#define ANIMAL_H
+
 #include <iostream>
-#include <string>z
+#include <string>
 
 class Animal{
 	protected:
@@ -15,4 +18,33 @@ class Animal{
 		string batismo;
 
 	public:
-}
+		Animal();
+		Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, string Bat);
+		~Animal();
+
+		int getId();
+		void setId(int Id);
+		
+		string getClasse();
+		void setClasse(string Classe);
+
+		string getNome();
+		void setNome(string Nome);
+
+		string getCientifico();
+		void setCientifico(string Cient);
+
+		char getSexo();
+		void setSexo(char Sexo);
+
+		float getTamanho();
+		void setTamanho(float Tam);
+
+		string getDieta();
+		void setDieta(string Dieta);
+
+		string getBatismo();
+		void setBatismo(string Bat);
+};
+
+#endif
