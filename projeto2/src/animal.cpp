@@ -8,13 +8,15 @@ Animal::Animal(){
 	sexo = 0;
 	tamanho = 0.0;
 	dieta = "";
+	veterinario = new Veterinario;
+	tratador = new Tratador;
 	batismo = "";
 }
 
-Animal::Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, string Bat)
-	: id(Id), classe(Classe), nome(Nome), cientifico(Cient), sexo(Sexo), tamanho(Tam), dieta(Dieta), batismo(Bat) {}
+Animal::Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, Veterinario* Vet, Tratador* Tra, string Bat)
+	: id(Id), classe(Classe), nome(Nome), cientifico(Cient), sexo(Sexo), tamanho(Tam), dieta(Dieta), veterinario(Vet), tratador(Tra), batismo(Bat) {}
 
-Animal::~Animal () {}
+Animal::~Animal (){}
 
 int Animal::getId(){return id;}
 
@@ -44,6 +46,54 @@ string Animal::getDieta(){return dieta;}
 
 void Animal::setDieta(string Dieta){dieta = Dieta;}
 
+Veterinario* Animal::getVeterinario(){return veterinario;}
+
+void Animal::setVeterinario(Veterinario *v){veterinario = v;}
+
+Tratador* Animal::getTratador(){return tratador;}
+
+void Animal::setTratador(Tratador *t){tratador = t;}
+
 string Animal::getBatismo(){return batismo;}
 
 void Animal::setBatismo(string Bat){batismo = Bat;}
+
+istream& operator>> (istream &Is, Animal &Ani) {
+
+	//Veterinario *v = Ani.getVeterinario();
+	//Tratador *t = Ani.getTratador();
+
+	//int idv,idt;
+
+	Is >> Ani.id;						
+	Is.ignore();						
+	getline(Is, Ani.classe, ';'); 		
+	getline(Is, Ani.nome, ';');			
+    getline(Is, Ani.cientifico, ';');	
+    Is >> Ani.sexo;						
+    Is.ignore();						
+    Is >> Ani.tamanho;					
+    Is.ignore();						
+    getline(Is, Ani.dieta, ';');    		
+    //Is >> idv;
+    //Is.ignore();
+    //Is >> idt;
+    //Is.ignore();
+    getline(Is, Ani.batismo, ';'); 	
+
+    return Is;
+}
+
+ostream& operator<< (ostream &Os, Animal &Ani) {
+
+	Os << "Identificador: " << Ani.id << endl;
+	Os << "Classe: " << Ani.classe << endl;	
+	Os << "Nome: " << Ani.nome << endl;
+	Os << "Nome científico: " << Ani.cientifico << endl;
+	Os << "Sexo: " << Ani.sexo << endl;
+	Os << "Tamanho médio em metros: " << Ani.tamanho << endl;
+	Os << "Dieta predominante: " << Ani.dieta << endl;
+	Os << "Nome de batismo: " << Ani.batismo << endl;
+
+	return Os;
+}

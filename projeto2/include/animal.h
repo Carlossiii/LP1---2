@@ -17,14 +17,18 @@ class Animal{
 		char sexo;
 		float tamanho;
 		string dieta;
-		Veterinario veterinario;
-		Tratador tratador;
+		Veterinario* veterinario;
+		Tratador* tratador;
 		string batismo;
 
 	public:
 		Animal();
-		Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, string Bat);
+		Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, Veterinario* Vet, Tratador* Tra, string Bat);
 		~Animal();
+
+		virtual void Cadastro(Animal *a,ifstream &is) = 0;
+		
+		virtual void Consulta(Animal *a) = 0;
 
 		int getId();
 		void setId(int Id);
@@ -47,8 +51,17 @@ class Animal{
 		string getDieta();
 		void setDieta(string Dieta);
 
+		Tratador* getTratador();
+		void setTratador(Tratador* Tra);
+
+		Veterinario* getVeterinario();
+		void setVeterinario(Veterinario* Vet);
+
 		string getBatismo();
 		void setBatismo(string Bat);
+
+		friend istream& operator>> (istream &is, Animal &a);
+		friend ostream& operator<< (ostream &os, Animal &a);
 };
 
 #endif
