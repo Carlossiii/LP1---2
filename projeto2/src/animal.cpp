@@ -59,29 +59,44 @@ string Animal::getBatismo(){return batismo;}
 void Animal::setBatismo(string Bat){batismo = Bat;}
 
 istream& operator>> (istream &Is, Animal &Ani) {
+	string line;
 
-	//Veterinario *v = Ani.getVeterinario();
-	//Tratador *t = Ani.getTratador();
+	getline(Is, line);
+	istringstream iss(line);
 
-	//int idv,idt;
-
-	Is >> Ani.id;						
-	Is.ignore();						
-	getline(Is, Ani.classe, ';'); 		
-	getline(Is, Ani.nome, ';');			
-    getline(Is, Ani.cientifico, ';');	
-    Is >> Ani.sexo;						
-    Is.ignore();						
-    Is >> Ani.tamanho;					
-    Is.ignore();						
-    getline(Is, Ani.dieta, ';');    		
-    //Is >> idv;
-    //Is.ignore();
-    //Is >> idt;
-    //Is.ignore();
-    getline(Is, Ani.batismo, ';'); 	
-
-    return Is;
+	iss>> Ani.id;
+	iss.ignore();
+	getline(iss, Ani.classe, ';');
+	getline(iss, Ani.nome, ';');
+	getline(iss, Ani.cientifico, ';');
+	iss>> Ani.sexo;
+	iss.ignore();
+	getline(iss, Ani.tamanho, ';');
+	getline(iss, Ani.dieta, ';');
+	getline(iss, Ani.batismo, ';');
+	/*
+	if(classe == "Amphibia"){
+		iss>> Ani.total_mudas;
+		iss.ignore();
+		getline(iss, Ani.ultima_muda);
+	}
+	else if(classe == "Reptilia"){
+		iss>> Ani.venenoso;
+		iss.ignore();
+		getline(iss, Ani.tipo_veneno);
+	}
+	else if(classe == "Aves"){
+		iss>> Ani.tamanho_bico;
+		iss.ignore();
+		iss>> Ani.envergadura;
+		iss.ignore();
+		//falta adicionar if e else para dados de AveNativa e AveExotica
+	}
+	else if(classe == "Mammalia"){
+		getline(iss, a.cor_pelo);
+	}
+	*/
+	return Is;
 }
 
 ostream& operator<< (ostream &Os, Animal &Ani) {

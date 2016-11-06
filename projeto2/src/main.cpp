@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
-#include <string>
+//#include <string>
 #include <sstream>
 #include <vector>
 #include "anfibio.h"

@@ -2,7 +2,6 @@
 #define ANFIBIO_H
 
 #include <iostream>
-//#include <string>
 #include "animal.h"
 
 using namespace std;

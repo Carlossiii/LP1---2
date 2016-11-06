@@ -2,9 +2,12 @@
 #define ANIMAL_H
 
 #include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include "funcionario.h"
 #include "tratador.h"
 #include "veterinario.h"
-//#include <string>
 
 using namespace std;
 
@@ -26,9 +29,9 @@ class Animal{
 		Animal(int Id, string Classe, string Nome, string Cient, char Sexo, float Tam, string Dieta, Veterinario* Vet, Tratador* Tra, string Bat);
 		~Animal();
 
-		virtual void Cadastro(Animal *a,ifstream &is) = 0;
+		virtual void Cadastro(Animal *Ani,ifstream &Is) = 0;
 		
-		virtual void Consulta(Animal *a) = 0;
+		virtual void Consulta(Animal *Ani) = 0;
 
 		int getId();
 		void setId(int Id);
@@ -60,8 +63,8 @@ class Animal{
 		string getBatismo();
 		void setBatismo(string Bat);
 
-		friend istream& operator>> (istream &is, Animal &a);
-		friend ostream& operator<< (ostream &os, Animal &a);
+		friend istream& operator>> (istream &Is, Animal &Ani);
+		friend ostream& operator<< (ostream &Os, Animal &Ani);
 };
 
 #endif
